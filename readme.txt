@@ -6,11 +6,11 @@ Requires at least: 3.2.0
 Tested up to: 3.2.1
 Stable tag: 0.1
 
-Automatyczne importowanie postów, stron, komentarzy, kategorii, tagów i mediów z innych istalacji WordPressa.
+Automatyczne importowanie postow, stron, komentarzy, kategorii, tagow i mediow z innych istalacji WordPressa.
 
 == Description ==
 
-Automatyczne importowanie postów, stron, komentarzy, kategorii, tagów i mediów z innych istalacji WordPressa.
+Automatyczne importowanie postow, stron, komentarzy, kategorii, tagow i mediow z innych istalacji WordPressa.
 
 == Installation ==
 
