@@ -2,14 +2,14 @@
 
 /**
  * @package Spolecznosci
- * @version 0.1
+ * @version 0.2
  */
 /*
 	Plugin Name: Blog Auto Importer
 	Plugin URI: 
 	Description: Automatyczne importowanie postów, stron, komentarzy, kategorii, tagów i mediów z innych istalacji WordPressa.
 	Author: Spolecznosci.net
-	Version: 0.1
+	Version: 0.2
 	Author URI: http://spolecznosci.net
 */
 
@@ -179,25 +179,26 @@ function spolecznosci_importplugin_options() {
 	$imported = false;
 	
 	if (!empty($_POST)) {
-		if(empty($_POST['domain'])) {
+		if(empty($_POST['import_domain'])) {
 			$wp_error->add('empty_domain', 'Podaj adres strony');
 		} else {
-			$domain = str_replace(array('http:','https:','/'),'',$_POST['domain']);
+			$domain = str_replace(array('http:','https:','/'),'',$_POST['import_domain']);
 		}
-		if(empty($_POST['login'])) {
+		if(empty($_POST['import_login'])) {
 			$wp_error->add('empty_domain', 'Podaj nazwę użytkownika');
 		} else {
-			$login = $_POST['login'];
+			$login = $_POST['import_login'];
 		}
-		if(empty($_POST['password'])) {
+		if(empty($_POST['import_password'])) {
 			$wp_error->add('empty_domain', 'Podaj hasło');
 		} else {
-			$password = $_POST['password'];
+			$password = $_POST['import_password'];
 		}
 		
 		if(!$wp_error->get_error_code()) {
 			switch($_POST['service']) {
 				case 'wordpress':
+					update_option('spolecznosci-blogimported',$domain);
 					$imported = WP_import($domain,$login,$password);
 					break;
 
@@ -255,26 +256,26 @@ function spolecznosci_importplugin_options() {
 					</tr>
 					<tr>
 						<td>
-							<label for="domain">Adres strony: </label>
+							<label for="import_domain">Adres strony: </label>
 						</td>
 						<td>
-							<input id="domain" name="domain" value="" type="text" />
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<label for="login">Nazwa użytkownika*: </label>
-						</td>
-						<td>
-							<input id="login" name="login" value="" type="text" />
+							<input id="import_domain" name="import_domain" value="" type="text" />
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<label for="password">Hasło*: </label>
+							<label for="import_login">Nazwa użytkownika*: </label>
 						</td>
 						<td>
-							<input id="password" name="password" value="" type="password" />
+							<input id="import_login" name="import_login" value="" type="text" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="import_password">Hasło*: </label>
+						</td>
+						<td>
+							<input id="import_password" name="import_password" value="" type="password" />
 						</td>
 					</tr>
 					<tr>
