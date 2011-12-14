@@ -14,7 +14,7 @@ Automatyczne importowanie postow, stron, komentarzy, kategorii, tagow i mediow z
 
 == Installation ==
 
-Don't use it if your WP is not hosted on spolecznosci.net
+Wymaga cURL
 
 
 == Changelog ==
