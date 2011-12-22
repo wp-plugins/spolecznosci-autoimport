@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: kersjous
-Donate link: http://spolecznosci.net/
+Donate link: http://miniblog.pl
 Tags: Spolecznosci
 Requires at least: 3.2.0
-Tested up to: 3.2.1
-Stable tag: 0.2
+Tested up to: 3.3
+Stable tag: 0.3
 
 Automatyczne importowanie postow, stron, komentarzy, kategorii, tagow i mediow z innych istalacji WordPressa.
 
@@ -14,10 +14,12 @@ Automatyczne importowanie postow, stron, komentarzy, kategorii, tagow i mediow z
 
 == Installation ==
 
-Don't use it if your WP is not hosted on spolecznosci.net
-
+Wymaga cURL
 
 == Changelog ==
+
+= 0.3 =
+Zmiana domeny
 
 = 0.2 =
 Zmiany dla WP 3.3

@@ -2,15 +2,15 @@
 
 /**
  * @package Spolecznosci
- * @version 0.2
+ * @version 0.3
  */
 /*
 	Plugin Name: Blog Auto Importer
 	Plugin URI: 
 	Description: Automatyczne importowanie postów, stron, komentarzy, kategorii, tagów i mediów z innych istalacji WordPressa.
-	Author: Spolecznosci.net
-	Version: 0.2
-	Author URI: http://spolecznosci.net
+	Author: miniblog.pl
+	Version: 0.3
+	Author URI: http://miniblog.pl
 */
 
 if ( ! defined( 'WP_LOAD_IMPORTERS' ) ) {
@@ -138,7 +138,7 @@ function WP_import($domain,$login,$password) {
 
 		if ($import_data['version'] > $wp_import->max_wxr_version ) {
 			echo '<div class="error"><p><strong>';
-			echo 'Zaimportowane dane są w wersji wyższej ('.$import_data['version'].') niż obsługiwana przez importer. Jeżeli importowanie nie wykonało się poprawnie skontaktuj się z administratorem społeczności.net (<a href="mailto:admin@spolecznosci.net">admin@spolecznosci.net</a>)';
+			echo 'Zaimportowane dane są w wersji wyższej ('.$import_data['version'].') niż obsługiwana przez importer. Jeżeli importowanie nie wykonało się poprawnie skontaktuj się z administratorem miniblog.pl (<a href="mailto:admin@miniblog.pl">admin@miniblog.pl</a>)';
 			echo '</strong></p></div>';
 		}
 
